@@ -1,0 +1,138 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <meta charset="UTF-8">
+
+ <!--mobile compatibility-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personas</title>
+
+<style>
+/* Dropdown Button */
+.dropbtn {
+  background-color: #9c9581;
+  color: white;
+  padding: 16px;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #cfaa43;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffe6bf;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(255, 209, 123);}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+</style>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+
+</head>
+
+  <!--viewport background color-->
+  <body style ="background-color: bisque;">
+    
+
+      <hr>
+
+      <!--nav bar-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">HOMEPAGE</a>
+          <a href="Goal.html">Goal of the Final App</a>
+          <a href="Persona-1.html">Personas</a>
+          <a href="Sketches.html">Sketches of the Final App</a>
+          <a href="Critique-1.html">Critique</a>
+          <a href="Frameworks.html">Frameworks</a>
+        </div>
+      </div> 
+
+      
+<!--heading and text-->
+<br><br><br>
+<h1 style="font-size:50px;text-align:center">Personas</h1>
+
+<a href="Persona-1.html">
+    <button>Persona-1</button>
+  </a>
+<a href="Persona-2.html">
+    <button>Persona-2</button>
+  </a>
+  <br>
+  <br>
+<p style="font-size:30px;text-align:left">Persona 1</p>
+<p style="font-size:30px;text-align:left">A young, male college student works with independant contractors for frequently moving heavy cargo and wants a car that can be used for work and also serve as a decent vehicle to go to college and for any other purposes.</p>
+
+<style> ul {
+    text-align: left;
+    list-style-position:inside;
+    font-size: 26px;
+}</style>
+
+<ul>
+<li class="mylist">He will want to choose a high-powered truck with enough cargo space.
+<li class="mylist">To achieve this he will visit the app and use the search bar to search for a "truck".
+<li class="mylist">This will bring up all the vehicles that contain the relevant tag.
+<li class="mylist">From here, the user can click on each result to view its details or click the picture to enlarge it.
+<li class="mylist">Furthermore, the user can filter the result to view particular requirements, for example, the cars which contain a particular range of power or can be acquired with a particular amount of budget and so on.
+
+</ul>
+
+  </body>
+</html>

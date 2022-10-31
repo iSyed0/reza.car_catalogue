@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.cars {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cars:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  margin-bottom: 200px; /* Location of the box */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1500px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 00px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeMyModal {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeMyModal:hover,
+.closeMyModal:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+    .column {
+    float: left;
+    width: 18%;
+    padding-left: 30px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+</style>
+
+
+<link href="headers.css" rel="stylesheet">
+<title>Car Catalogue</title>
+
+
+
+
+
+</head>
+<body style ="background-color: bisque;">
+  <nav>
+    <hr>
+    <ul>
+      
+      <li style="display:inline-block;"> <a href="index.html">HOMEPAGE</a>
+      </li>
+      <li style="display:inline-block;"> <a href="">About</a>
+      </li>
+      <li style="display:inline-block;"><a href="">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="USA.html" class="nav-link">USA</a></li>
+        <li class="nav-item"><a href="Germany.html" class="nav-link">Germany</a></li>
+        <li class="nav-item"><a href="Japan.html" class="nav-link">Japan</a></li>
+        <li class="nav-item"><a href="Italy.html" class="nav-link">Italy</a></li>
+      </ul>
+    </header>
+  </div>
+<h1 style="font-size:50px;text-align:center">Germany </h1>
+<div class="text-box">
+<p style="font-size:40px;text-align:left;text-indent:300px"></p>
+<div style="text-align: center;">
+<img src="https://th.bing.com/th/id/R.a8b26f66dafd3a3faf1b397e67188f49?rik=z9V6BBluZRPjKQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Germany_flag"style="width:140px;height:140px;">
+</div>
+<hr>
+<br>
+<br>
+<br>
+
+<div class="column">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCQJBL.jpg" alt="audi"style="width:300px;height:200px;margin-top:-50px"></a>
+<p style="font-size:25px;text-align:left;text-indent:100px">Audi<br></p>
+</div>
+
+<div class="column">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCR1Eb.jpg" alt="BMW"style="width:300px;height:200px;margin-top:-50px"></a>
+<p style="font-size:25px;text-align:left;text-indent:100px">BMW<br></p>
+</div>
+
+<div class="column">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBAcXZE.jpg" alt="mercedes-benz"style="width:300px;height:200px;margin-top:-50px"></a>
+<p style="font-size:25px;text-align:left;text-indent:100px">Mercedes-Benz<br></p>
+</div>
+
+<div class="column">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/AAeCihe.jpg" alt="porsche"style="width:300px;height:200px;margin-top:-50px"></a>
+<p style="font-size:25px;text-align:left;text-indent:100px">Porsche<br></p>
+</div>
+
+<div class="column">
+<img Class="cars"src="https://purepng.com/public/uploads/large/purepng.com-volkswagenvolkswagenvolkswagen-carvolkswagen-automobilesvolkswagen-vehicles-1701527682039xdva4.png" alt="volkswagen"style="width:280px;height:180px;margin-top:-50px"></a>
+<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:20px">Volkswagen<br></p>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="closeMyModal">&times;</span>
+  <img class="modal-content" id="myModalImg">
+  <div id="myModalImgCaption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var cars = document.getElementsByClassName("cars");
+var myModalImg = document.getElementById("myModalImg");
+var myModalImgCaptionText = document.getElementById("myModalImgCaption");
+
+document.body.onclick = function(e) {
+    var clickedEl = window.event ? event.srcElement : e.target;
+    while (clickedEl != null) {
+        if (clickedEl.className && (" " + clickedEl.className + " ").indexOf("cars") != -1) {
+            modal.style.display = "block";
+            myModalImg.src = clickedEl.src;
+            myModalImgCaptionText.innerHTML = clickedEl.alt;
+            return;
+        }
+        clickedEl = clickedEl.parentNode;
+    }
+}
+
+// Get the <span> element that closes the modal
+var closeMyModal = document.getElementsByClassName("closeMyModal")[0];
+
+// When the user clicks on <span> (x), close the modal
+closeMyModal.onclick = function() { 
+  modal.style.display = "none";
+}
+</Script>

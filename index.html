@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+ <meta charset="UTF-8">
+
+ <!--mobile compatibility-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Catalogue</title>
+
+  <!--img clickable area hover color-->
+<style>img:hover{
+  background-color: rgb(240, 203, 136);}</style>
+  <!--imgs horizontal positioning-->
+
+      <style>
+.column {
+  float: left;
+  width: 18%;
+  padding-left: 130px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #9c9581;
+  color: white;
+  padding: 16px;
+  font-size: 36px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #cfaa43;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffe6bf;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: rgb(255, 209, 123);}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;} 
+
+ /* styling search bar */
+ .search input[type=text]{
+        width:300px;
+        height:25px;
+        border-radius:25px;
+        border: none;
+    }
+         
+    .search{
+        float:right;
+        margin:7px;
+    }
+         
+    .search button{
+        background-color: #d98200;
+        color: #f2f2f2;
+        float: right;
+        padding: 5px 10px;
+        margin-right: 16px;
+        font-size: 12px;
+        border: none;
+        cursor: pointer;
+    }
+
+
+</style>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+
+</head>
+
+  <!--viewport background color-->
+  <body style ="background-color: bisque;">
+
+
+      <hr>
+
+      <!--nav bar-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">HOMEPAGE</a>
+          <a href="Goal.html">Goal of the Final App</a>
+          <a href="Persona-1.html">Personas</a>
+          <a href="Sketches.html">Sketches of the Final App</a>
+          <a href="Critique-1.html">Critique</a>
+          <a href="Frameworks.html">Frameworks</a>
+        </div>
+      </div> 
+      
+        <!-- search bar right align -->
+        <div class="search">
+          <form action="#">
+              <input type="text"
+                  placeholder=" Search Catalogue"
+                  name="search">
+              <button>
+                  <i class="fa fa-search"
+                      style="font-size: 18px;">
+                  </i>
+              </button>
+          </form>
+      </div>
+  </div>
+   
+  <img src="https://blog.calcarcover.com/media/70482/img_0490.jpg?anchor=center&mode=crop&width=830&height=521&rnd=132012646180000000"alt="coverpicture"style="width:400px;height:200px">
+<!--heading and text-->
+<h1 style="font-size:50px;text-align:center">Car Catalogue </h1>
+<p style="font-size:40px;text-align: center">HOMEPAGE</p>
+<p style="font-size:30px;text-align: center">A webapp dedicated to providing you with a catalogue of the best cars geographically.</p>
+
+<!--main content-->
+  <div class="column">
+<a href="USA.html"><img src="https://www.norskanalyse.com/wp-content/uploads/2020/04/USA-300.png" alt="USA_flag"style="width:137px;height:133px;margin-top:40px"></a>
+<p style="font-size:30px;text-align:left;margin-top:10px;margin-left:40px;font-family:Arial, Helvetica, sans-serif;">USA</p>
+</div>
+
+
+  <div class="column">
+<a href="Germany.html"><img src="https://th.bing.com/th/id/R.a8b26f66dafd3a3faf1b397e67188f49?rik=z9V6BBluZRPjKQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Germany_flag"style="width:130px;height:133px;margin-top:40px"></a>
+<p style="font-size:30px;text-align:left;margin-top:10px;margin-left:5px;font-family:Arial, Helvetica, sans-serif;">Germany</p>
+  </div>
+
+
+    <div class="column">
+<a href="Japan.html"><img src="https://cdn.countryflags.com/thumbs/japan/flag-3d-round-250.png" alt="Japan_flag"style="width:133px;height:133px;margin-top:40px"></a>
+<p style="font-size:30px;text-align:left;margin-top:10px;margin-left:25px;font-family:Arial, Helvetica, sans-serif;">Japan</p>
+    </div>
+
+
+      <div class="column">
+<a href="Italy.html"><img src="https://i0.wp.com/marketingcube.com.au/wp-content/uploads/2018/08/FLAG-Italy-ID-Circle-274pxl.png-e1535381632780.png?ssl=1" alt="Italy_flag"style="width:133px;height:133px;margin-top:40px"></a>
+<p style="font-size:30px;text-align:left;margin-top:10px;margin-left:38px;font-family:Arial, Helvetica, sans-serif;">Italy</p>
+      </div>
+
+      <p style="font-size:20px;text-align: center;text-align;">Click the flags for information.</p>
+
+  </body>
+
+  </html>
+
