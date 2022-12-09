@@ -7,7 +7,10 @@
   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<!--external stylesheet-->
+    <link rel="stylesheet" type="text/css" href="css.css"/>
+      <!--external javascript-->
+  <script src="script.js"></script> 
 
 <style>
   .bd-placeholder-img {
@@ -88,15 +91,16 @@
 <body style ="background-color: bisque;">
   <nav>
     <hr>
-    <ul>
-      
-      <li style="display:inline-block;"> <a href="index.html">HOMEPAGE</a>
-      </li>
-      <li style="display:inline-block;"> <a href="">About</a>
-      </li>
-      <li style="display:inline-block;"><a href="">Contact Us</a>
-      </li>
-    </ul>
+          <!--nav bar-->
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">≡</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">HOMEPAGE</a>
+              <a href="USA.html">USA</a>
+              <a href="Germany.html">Germany</a>
+              <a href="Italy.html">Italy</a>
+            </div>
+          </div> 
   </nav>
   <div class="container">
     <header class="d-flex justify-content-center py-3">
@@ -117,32 +121,36 @@
 </div>
 <hr>
 <br>
-<br>
-<br>
 
-<div class="column">
-<img Class="cars"src="https://purepng.com/public/uploads/large/purepng.com-lexuslexusluxury-vehicletoyotapremium-cars-1701527516672zb3us.png" alt="lexus"style="width:300px;height:200px;margin-top:-53px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px">Lexus<br></p>
+
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://purepng.com/public/uploads/large/purepng.com-lexuslexusluxury-vehicletoyotapremium-cars-1701527516672zb3us.png" alt="lexus"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Lexus<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCQT6H.jpg" alt="mitsubishi"style="width:300px;height:200px;margin-top:-53px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px">Mitsubishi<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCQT6H.jpg" alt="mitsubishi"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Mitsubishi<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCRa1Q.jpg" alt="mazda"style="width:300px;height:200px;margin-top:-45px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:-10px">Mazda<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCRa1Q.jpg" alt="mazda"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Mazda<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://autos.hamariweb.com/images/carimages/AAkxT2K.jpg" alt="toyota"style="width:300px;height:200px;margin-top:-56px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px">Toyota<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/AAkxT2K.jpg" alt="toyota"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Toyota<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://pngimages.in/uploads/png/Acura-NSX-Car-PNG-Image.png" alt="honda"style="width:300px;height:150px;margin-top:-15px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:10px;">Honda<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://pngimages.in/uploads/png/Acura-NSX-Car-PNG-Image.png" alt="honda"style="width:300px;height:150px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Honda<br></p>
 </div>
 
 <!-- The Modal -->
@@ -252,7 +260,7 @@ closeMyModal.onclick = function() {
 .closeMyModal {
   position: absolute;
   top: 15px;
-  right: 35px;
+  left: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;

@@ -9,6 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+      <!--external stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css.css" />
+  <!--external javascript-->
+  <script src="script.js"></script> 
+
     <style>
  
       /* Set display to none for image*/
@@ -68,10 +73,10 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+
 </style>
 
 
-<link href="headers.css" rel="stylesheet">
 <title>Car Catalogue</title>
 
 <style>
@@ -94,15 +99,17 @@
 <body style ="background-color: bisque;">
   <nav>
     <hr>
-    <ul>
-      
-      <li style="display:inline-block;"> <a href="index.html">HOMEPAGE</a>
-      </li>
-      <li style="display:inline-block;"> <a href="">About</a>
-      </li>
-      <li style="display:inline-block;"><a href="">Contact Us</a>
-      </li>
-    </ul>
+
+          <!--nav bar-->
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">≡</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">HOMEPAGE</a>
+              <a href="Germany.html">Germany</a>
+              <a href="Japan.html">Japan</a>
+              <a href="Italy.html">Italy</a>
+            </div>
+          </div> 
   </nav>
   <div class="container">
     <header class="d-flex justify-content-center py-3">
@@ -121,44 +128,48 @@
 <p style="font-size:40px;text-align:left;text-indent:100px"></p>
 
 <div style="text-align: center;">
-<img src="https://th.bing.com/th/id/R.8ad5fa7c70b85cb1457f3b424bf8fbbf?rik=nY85B3dMpX%2fAyQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="USA_flag"style="width:160px;height:160px;margin-top:-10px;margin-bottom:-10px">
+<img src="https://th.bing.com/th/id/R.8ad5fa7c70b85cb1457f3b424bf8fbbf?rik=nY85B3dMpX%2fAyQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="USA_flag"class="center" style="width:160px;height:160px;margin-top:-10px;margin-bottom:-10px">
 </div>
 
 <hr>
 <br>
-<br>
-<br>
 
 
-<div class="column">
-<img Class="cars"src="https://pngimg.com/uploads/tesla_car/tesla_car_PNG10.png"alt="tesla"style="width:300px;height:200px;margin-top:-45px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:-10px;">Tesla<br></p>
 
-</div>
-</div>
-
-<div class="column">
-<img class="cars"src="https://autos.hamariweb.com/images/carimages/BBCQW9W.jpg"alt="dodge"style="width:300px;height:200px;margin-top:-55px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px">Dodge<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://pngimg.com/uploads/tesla_car/tesla_car_PNG10.png"alt="tesla"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;margin-top:-10px;">Tesla<br></p>
 
 </div>
+</div>
 
-
-<div class="column">
-<img class="cars"src="https://autos.hamariweb.com/images/carimages/BBCR5Zm.jpg"alt="chevrolet"style="width:300px;height:200px;margin-top:-48px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:-5px;">Chevrolet<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img class="cars"src="https://autos.hamariweb.com/images/carimages/BBCQW9W.jpg"alt="dodge"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Dodge<br></p>
 
 </div>
 
-<div class="column">
-<img class="cars"src="https://autos.hamariweb.com/images/carimages/AAent7h.jpg"alt="ford"style="width:300px;height:200px;margin-top:-55px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px">Ford<br></p>
+
+<div class="row">
+  <div class="col-sm-4">
+<img class="cars"src="https://autos.hamariweb.com/images/carimages/BBCR5Zm.jpg"alt="chevrolet"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;margin-top:px;">Chevrolet<br></p>
 
 </div>
 
-<div class="column">
-<img Class="cars"src="https://purepng.com/public/uploads/large/purepng.com-chryslerchryslerfiat-chrysler-automobilesfiatcars-1701527440792mzhcn.png"alt="chrysler"style="width:300px;height:200px;margin-top:-55px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:px;">Chrysler<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img class="cars"src="https://autos.hamariweb.com/images/carimages/AAent7h.jpg"alt="ford"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px">Ford<br></p>
+
+</div>
+
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://purepng.com/public/uploads/large/purepng.com-chryslerchryslerfiat-chrysler-automobilesfiatcars-1701527440792mzhcn.png"alt="chrysler"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;margin-top:px;">Chrysler<br></p>
 </div>
 
 <!-- The Modal -->
@@ -231,7 +242,7 @@ closeMyModal.onclick = function() {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 1500px;
+  max-width: 100%;
 }
 
 /* Caption of Modal Image */
@@ -267,8 +278,8 @@ closeMyModal.onclick = function() {
 /* The Close Button */
 .closeMyModal {
   position: absolute;
-  top: 15px;
-  right: 35px;
+  top: 5px;
+  left: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;

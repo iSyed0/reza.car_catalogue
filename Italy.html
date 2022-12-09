@@ -8,6 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--external stylesheet-->
+    <link rel="stylesheet"type="text/css" href="css.css"/>
+      <!--external javascript-->
+  <script src="script.js"></script> 
 
 <style>
   .bd-placeholder-img {
@@ -87,15 +91,17 @@
 <body style ="background-color: bisque;">
   <nav>
     <hr>
-    <ul>
-      
-      <li style="display:inline-block;"> <a href="index.html">HOMEPAGE</a>
-      </li>
-      <li style="display:inline-block;"> <a href="">About</a>
-      </li>
-      <li style="display:inline-block;"><a href="">Contact Us</a>
-      </li>
-    </ul>
+          <!--nav bar-->
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">≡</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="index.html">HOMEPAGE</a>
+              <a href="USA.html">USA</a>
+              <a href="Germany.html">Germany</a>
+              <a href="Japan.html">Japan</a>
+
+            </div>
+          </div> 
   </nav>
   <div class="container">
     <header class="d-flex justify-content-center py-3">
@@ -116,32 +122,36 @@
 </div>
 <hr>
 <br>
-<br>
-<br>
 
-<div class="column">
-<img Class="cars"src="https://i.pinimg.com/originals/62/33/cc/6233cc730823e3c0c8a50e99f5662f50.png" alt="alpha romeo"style="width:280px;height:180px;margin-top:-55px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:13px;">Alpha Romeo<br></p>
+
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://i.pinimg.com/originals/62/33/cc/6233cc730823e3c0c8a50e99f5662f50.png" alt="alpha romeo"style="width:280px;height:180px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;">Alpha Romeo<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://th.bing.com/th/id/R.09e5bab937768185b71be85118deddc1?rik=uppqG1KhWsIJjw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f4%2fBugatti-PNG-Transparent-Image.png&ehk=6Cg5VGYqtcXctoba0X5zD33%2bwWetUctvadzL5dnX7uE%3d&risl=&pid=ImgRaw&r=0" alt="bugatti"style="width:330px;height:160px;margin-top:-35px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:12px;">Bugatti<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://th.bing.com/th/id/R.09e5bab937768185b71be85118deddc1?rik=uppqG1KhWsIJjw&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f4%2fBugatti-PNG-Transparent-Image.png&ehk=6Cg5VGYqtcXctoba0X5zD33%2bwWetUctvadzL5dnX7uE%3d&risl=&pid=ImgRaw&r=0" alt="bugatti"style="width:330px;height:160px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;">Bugatti<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://th.bing.com/th/id/R.ab3de17cfee6f11f124047b1492490e2?rik=h%2bKcF0Ybktz26g&pid=ImgRaw&r=0" alt="Ferrari"style="width:320px;height:180px;margin-top:-40px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:0px;">Ferrari<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://th.bing.com/th/id/R.ab3de17cfee6f11f124047b1492490e2?rik=h%2bKcF0Ybktz26g&pid=ImgRaw&r=0" alt="Ferrari"style="width:320px;height:180px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;">Ferrari<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://th.bing.com/th/id/R.528a8757576f7d5bda4a4be6f9f384eb?rik=dmyt41i6qeCYnw&pid=ImgRaw&r=0" alt="lamborghini"style="width:300px;height:150px;margin-top:-33px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:21px;">Lamborghini<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://th.bing.com/th/id/R.528a8757576f7d5bda4a4be6f9f384eb?rik=dmyt41i6qeCYnw&pid=ImgRaw&r=0" alt="lamborghini"style="width:300px;height:150px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;">Lamborghini<br></p>
 </div>
 
-<div class="column">
-<img Class="cars"src="https://autos.hamariweb.com/images/carimages/AAet14S.jpg" alt="maserati"style="width:300px;height:200px;margin-top:-57px"></a>
-<p style="font-size:25px;text-align:left;text-indent:100px;margin-top:-5px;">Maserati<br></p>
+<div class="row">
+  <div class="col-sm-4">
+<img Class="cars"src="https://autos.hamariweb.com/images/carimages/AAet14S.jpg" alt="maserati"style="width:300px;height:200px;margin-top:px"></a>
+<p style="font-size:25px;text-align:center;text-indent:px;">Maserati<br></p>
 </div>
 
 <!-- The Modal -->
@@ -251,7 +261,7 @@ closeMyModal.onclick = function() {
 .closeMyModal {
   position: absolute;
   top: 15px;
-  right: 35px;
+  left: 35px;
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
