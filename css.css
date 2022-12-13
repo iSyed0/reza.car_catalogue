@@ -13,9 +13,10 @@
   width: auto;
 }
 
-/*TOPNAV*/
 
-/* Add a black background color to the top navigation */
+/*TOPNAV*/ 
+
+/* Add a background color to the top navigation */
 .topnav {
   background-color: rgb(175, 142, 92);
     overflow: hidden;
@@ -159,7 +160,7 @@
     max-width: 00px;
     text-align: center;
     color: #ccc;
-    padding: 10px 0;
+    padding: 10px 0px;
     height: 150px;
   }
   
