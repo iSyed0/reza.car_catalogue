@@ -65,3 +65,5 @@ var closeMyModal = document.getElementsByClassName("closeMyModal")[0];
 closeMyModal.onclick = function() { 
   modal.style.display = "none";
 }
+
+

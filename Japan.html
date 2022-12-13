@@ -25,17 +25,17 @@
             <button onclick="myFunction()" class="dropbtn">≡</button>
             <div id="myDropdown" class="dropdown-content">
               <a href="index.html">HOMEPAGE</a>
-              <a href="USA.html">USA</a>
+              <a href="Bookmarks.html">Bookmarks</a>
               <a href="Germany.html">Germany</a>
               <a href="Italy.html">Italy</a>
             </div>
           </div> 
           <br><br>
   <div class="topnav">
-    <a class="active" href="index.html">Home</a>
+    <a href="index.html">Home</a>
       <a href="USA.html">USA</a>
       <a href="Germany.html">Germany</a>
-      <a href="Japan.html">Japan</a>
+      <a href="Japan.html" class="active">Japan</a>
       <a href="Italy.html">Italy</a>
   </div>
   </div>
@@ -52,32 +52,32 @@
 <div class="row">
   <div class="col-sm-4">
 <img Class="cars"src="https://purepng.com/public/uploads/large/purepng.com-lexuslexusluxury-vehicletoyotapremium-cars-1701527516672zb3us.png" alt="lexus"style="width:300px;height:200px;margin-top:px"></a>
-<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Lexus<br></p>
-</div>
+<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Lexus ▼<br></p>
+<div class="content">Engine Power: 383hp<br>Top Speed: 220mph<br>Acceleration: 0-60mi/5.3s<br>Fuel Range: 444mi<br>Price: $93,275</div>
 
 <div class="row">
   <div class="col-sm-4">
 <img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCQT6H.jpg" alt="mitsubishi"style="width:300px;height:200px;margin-top:px"></a>
-<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Mitsubishi<br></p>
-</div>
+<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Mitsubishi ▼<br></p>
+<div class="content">Engine Power: 300hp<br>Top Speed: 140mph<br>Acceleration: 0-60mi/4.9s<br>Fuel Range: 350mi<br>Price: $67,500</div>
 
 <div class="row">
   <div class="col-sm-4">
 <img Class="cars"src="https://autos.hamariweb.com/images/carimages/BBCRa1Q.jpg" alt="mazda"style="width:300px;height:200px;margin-top:px"></a>
-<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Mazda<br></p>
-</div>
+<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Mazda ▼<br></p>
+<div class="content">Engine Power: 200hp<br>Top Speed: 120mph<br>Acceleration: 0-60mi/4.9s<br>Fuel Range: 370mi<br>Price: $62,810</div>
 
 <div class="row">
   <div class="col-sm-4">
 <img Class="cars"src="https://autos.hamariweb.com/images/carimages/AAkxT2K.jpg" alt="toyota"style="width:300px;height:200px;margin-top:px"></a>
-<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Toyota<br></p>
-</div>
+<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Toyota ▼<br></p>
+<div class="content">Engine Power: 360hp<br>Top Speed: 180mph<br>Acceleration: 0-60mi/4.2s<br>Fuel Range: 463mi<br>Price: $92,600</div>
 
 <div class="row">
   <div class="col-sm-4">
 <img Class="cars"src="https://pngimages.in/uploads/png/Acura-NSX-Car-PNG-Image.png" alt="honda"style="width:300px;height:150px;margin-top:px"></a>
-<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Honda<br></p>
-</div>
+<p style="font-size:25px;text-align:center;text-indent:px"class="collapsible">Honda ▼<br></p>
+<div class="content">Engine Power: 240hp<br>Top Speed: 140mph<br>Acceleration: 0-60mi/3.9s<br>Fuel Range: 415mi<br>Price: $76,000</div>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -117,4 +117,21 @@ var closeMyModal = document.getElementsByClassName("closeMyModal")[0];
 closeMyModal.onclick = function() { 
   modal.style.display = "none";
 }
+
+  /*COLLAPSIBLE*/
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</Script>
 </Script>

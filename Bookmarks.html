@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="jquery-3.6.1.min.js"></script>
+  <!--external stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css.css" />
+
+ <meta charset="UTF-8">
+
+ <!--mobile compatibility-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Catalogue</title>
+
+  <!--img clickable area hover color-->
+<style>img:hover{
+  background-color: rgb(240, 203, 136);}
+  
+
+.column {
+  float: left;
+  width: 18%;
+  padding-left: 130px;
+}
+
+
+
+ /* styling search bar */
+ .search input[type=text]{
+        width:200px;
+        height:25px;
+        border-radius:25px;
+        border: none;
+        position:relative;
+     
+    }
+         
+    .search{
+        float:right;
+        margin:-5px;
+        margin-top: 50px;
+    }
+         
+    .search button{
+        background-color: #d98200;
+        color: #f2f2f2;
+        float: right;
+        padding: 5px 5px;
+        margin-right: 16px;
+        font-size: 6px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .collapsible {
+    background-color: rgb(175, 142, 92);
+    color: white;
+    cursor: pointer;
+    float: center;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 10px;
+
+  }
+  
+  .active, .collapsible:hover {
+    background-color: rgb(175, 142, 92);
+  }
+  
+</style>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+
+</head>
+
+  <!--viewport background color-->
+  <body style ="background-color: bisque;">
+
+
+      <hr>
+
+      <!--nav bar-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">HOMEPAGE</a>
+          <a href="Bookmarks.html"class="active">Bookmarks</a>
+
+        </div>
+      </div> 
+      <br>
+      <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Bookmarks </h1>
+      <br><br>
+<div class="container">
+  <a href="Italy.html"><button type="button" class="button"><h2 style="font-size: 21px;text-align: center;color: black;"> Country with the Most Expensive Cars.</h2></button></a></div>
+<br><br>
+<div class="container">
+  <a href="Japan.html"><button type="button" class="button"><h2 style="font-size: 21px;text-align: center;color: black;"> Country with the Most Affordable Cars.</h2></button></a></div>
+<br><br>
+<div class="container">
+  <a href="Germany.html"><button type="button" class="button"><h2 style="font-size: 21px;text-align: center;color: black;"> Country with the Highest Fuel Range Cars.</h2></button></a></div>
+<br><br>
+<div class="container">
+  <a href="USA.html"><button type="button" class="button"><h2 style="font-size: 21px;text-align: center;color: black;"> Country with the Highest Number of Trucks.</h2></button></a></div>
+<br><br>
+
+</body>
+
+  </html>
+
