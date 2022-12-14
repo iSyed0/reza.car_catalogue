@@ -81,7 +81,6 @@
 <div id="myModal" class="modal">
   <span class="closeMyModal">&times;</span>
   <img class="modal-content" id="myModalImg">
-  <div id="myModalImgCaption"></div>
 </div>
 
 <script>
@@ -91,7 +90,6 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var cars = document.getElementsByClassName("cars");
 var myModalImg = document.getElementById("myModalImg");
-var myModalImgCaptionText = document.getElementById("myModalImgCaption");
 
 document.body.onclick = function(e) {
     var clickedEl = window.event ? event.srcElement : e.target;
@@ -99,7 +97,6 @@ document.body.onclick = function(e) {
         if (clickedEl.className && (" " + clickedEl.className + " ").indexOf("cars") != -1) {
             modal.style.display = "block";
             myModalImg.src = clickedEl.src;
-            myModalImgCaptionText.innerHTML = clickedEl.alt;
             return;
         }
         clickedEl = clickedEl.parentNode;
