@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <!--bootstrap-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="jquery-3.6.1.min.js"></script>
+
   <!--external stylesheet-->
   <link rel="stylesheet" type="text/css" href="css.css" />
 
@@ -16,60 +17,13 @@
 
     <title>Car Catalogue</title>
 
-  <!--img clickable area hover color-->
-<style>img:hover{
+    <style>
+  /*img clickable area hover color*/
+img :hover{
   background-color: rgb(240, 203, 136);}
 
 
-.column {
-  float: left;
-  width: 18%;
-  padding-left: 130px;
-}
-
-
-
- /* styling search bar */
- .search input[type=text]{
-        width:200px;
-        height:25px;
-        border-radius:25px;
-        border: none;
-        position:relative;
-     
-    }
-         
-    .search{
-        float:right;
-        margin:-5px;
-        margin-top: 50px;
-    }
-         
-    .search button{
-        background-color: #d98200;
-        color: #f2f2f2;
-        float: right;
-        padding: 5px 5px;
-        margin-right: 16px;
-        font-size: 6px;
-        border: none;
-        cursor: pointer;
-    }
-
-    .collapsible {
-    background-color: rgb(175, 142, 92);
-    color: white;
-    cursor: pointer;
-    float: center;
-    padding: 5px;
-    width: 100%;
-    border: none;
-    text-align: center;
-    outline: none;
-    font-size: 10px;
-
-  }
-  
+  /*replicate color to make title bar not look like a button*/
   .active, .collapsible:hover {
     background-color: rgb(175, 142, 92);
   }
