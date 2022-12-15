@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--bootstrap-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--external stylesheet-->
+  <link rel="stylesheet" type="text/css" href="css.css" />
+
+ <meta charset="UTF-8">
+
+ <!--mobile compatibility-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Car Catalogue</title>
+
+<style>
+  .active, .collapsible:hover {
+    background-color: rgb(175, 142, 92);
+  }
+  
+</style>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
+
+</head>
+
+  <!--viewport background color-->
+  <body style ="background-color: bisque;">
+
+
+      <hr>
+
+      <!--nav bar-->
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">≡</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html">HOMEPAGE</a>
+          <a href="Bookmarks.html">Bookmarks</a>
+          <a href="Login.html">Login/Register</a>
+        </div>
+      </div> 
+      <br>
+      <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Blogs</h1>
+      <br><br>
+     <h2>5 Best Cars and Trucks for 2022</h2>
+      <h3>2022 Porsche 718</h3>
+   <p> The Porsche 718's special gift is speed. The 718 looks fast and is fast. Blur-the-scenery fast. Effortlessly fast. Fast times two, actually, because the 718 line consists of fraternal mid-engine twins, the Boxster droptop and the fixed-top Cayman, both of which we honor here once again. Their performance heroics have been handed down through four generations; clearly, it's in their DNA, which seems to come from a place only the engineers in Zuffenhausen know about and have access to. In the 25 years since the Boxster went on sale in the U.S., it and the Cayman—which arrived from planet Porsche in the 2006 model year—have earned our 10Best award 23 times.For 2022, the 718 Boxster models that get the key to our city are the base four-cylinder roadster, the T, and the S. They're joined by the Cayman coupe, T, and S as well as the six-cylinder Cayman GTS 4.0. Unfortunately, the Cayman GT4, 718 Spyder, Boxster GTS 4.0, and 25 Years commemorative edition all sticker above our 10Best price cap. </p>
+    <br>
+    <h3></h3>
+  </body>
+
+    </html>
