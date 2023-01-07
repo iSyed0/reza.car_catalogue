@@ -64,9 +64,9 @@ window.onclick = function(event) {
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">≡</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="index.html"class="active">HOMEPAGE</a>
+          <a href="index.php"class="active">HOMEPAGE</a>
           <a href="Bookmarks.html">Bookmarks</a>
-          <a href="Login.html">Login/Register</a>
+          <a href="Login.php">Login/Register</a>
         </div>
       </div> 
       
@@ -218,13 +218,13 @@ if(isset($_POST['save']))
   <div class="footer-left">
 
       <p class="footer-links">
-          <a class="link-1" href="index.html">Home</a>
+          <a class="link-1" href="index.php">Home</a>
 
           <a href="blog.html">Blogs</a>
 
           <a href="About.html">About</a>
 
-          <a href="contact.html">Contact Us</a>
+          <a href="contact.php">Contact Us</a>
       </p>
 
       <p>CarCatalogue &copy; 2022</p>
