@@ -70,22 +70,27 @@ window.onclick = function(event) {
         </div>
       </div> 
       
+                
+      <!--page title-->
+      <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Car Catalogue </h1>
+  <img src="https://blog.calcarcover.com/media/70482/img_0490.jpg?anchor=center&mode=crop&width=830&height=521&rnd=132012646180000000"alt="coverpicture"style="width:100%;height:210px"class="center">
+<!--heading and text-->
 
+
+<p style="font-size:30px;text-align: center"class="collapsible">Assisting you with making a better choice in choosing an automobile.</p>
+<br>
         <!-- search bar right align -->
         
         <div class="search">
-          <form action="#"method="post">
-              <input type="text"
-                  placeholder=" Search Catalogue"
-                  name="search">
+          <form action="index.php"  method="post">
+              <input type="text" placeholder=" Search Catalogue" name="search">
               
-              <button>
-                  <i class="fa fa-search"
-                      style="font-size: 18px;">
-                  </i>
-              </button>
-              </div>
+              <button type="submit" name="save" class="btn btn-success btn-sm">Submit</button>
+ 
+                 
+              
             </form>
+            </div>
             <br><br>
             <h3><u>Search Result</u></h3><br/>
     <div class="table-responsive">          
@@ -95,14 +100,11 @@ window.onclick = function(event) {
             <th>#</th>
             <th>Brand_name</th>
             <th>Engine_power</th>
-            <th>Speed</th>
-            <th>0-60mph</th> 
-            <th>Fuel_range</th>
             <th>Price</th>
            
           </tr>
         </thead>
-      </html>
+     
         
   <?php
 
@@ -130,11 +132,15 @@ if(isset($_POST['save']))
     if(!empty($_POST['search']))
     {
         $search = $_POST['search'];
-        $stmt = $con->prepare("select * from cars where title like ' %$search%' or Brand_name like '%$search%'");
+        $stmt = $con->prepare("select * from cars where Brand_name like '%$search%' ");
         $stmt->execute();
         $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
-         
+
+      foreach ($cars as $key => $value) {
+
+        echo $value['Brand_name'];
+
+      }
     }
     else
     {
@@ -148,36 +154,38 @@ if(isset($_POST['save']))
 <?php
                  if(!$cars)
                  {
-                    echo '<tr>No data found</tr>';
+              if(isset($_POST['submit']))  echo 'No data found';
                  }
                  else{
+
                     foreach($cars as $key=>$value)
                     {
                         ?>
                     <tr>
                         <td><?php echo $key+1;?></td>
                         <td><?php echo $value['Brand_name'];?></td>
-                        <td rowspan="2"><?php echo $value['country'];?></td>
-                        <td ><?php echo $value['cars'];?></td>
+                        <td ><?php echo $value['Engine_power'];?></td>
+                        <td ><?php echo $value['Price'];?></td>
                        
                     </tr>
-                         
-                        <?php
-                    }
-                     
+                        <?php 
+                    } 
+
                  }
-                ?>
-                <html>
-
+                        
+                        ?>
                 
-      <!--page title-->
-  <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Car Catalogue </h1>
-  <img src="https://blog.calcarcover.com/media/70482/img_0490.jpg?anchor=center&mode=crop&width=830&height=521&rnd=132012646180000000"alt="coverpicture"style="width:100%;height:210px"class="center">
-<!--heading and text-->
+                      
+                          </table>
+                          </div>  
+
+                    
+                     
+                 
+              
+                
 
 
-<p style="font-size:30px;text-align: center"class="collapsible">Assisting you with making a better choice in choosing an automobile.</p>
-<br>
 <!--main content-->
 <a href="USA.html"><img style="float:center;text-align:center;width:137px;height:133px;margin-top:40px" src="https://www.norskanalyse.com/wp-content/uploads/2020/04/USA-300.png" alt="USA_flag" class="cars" ></a>
 <p style="font-size:30px;text-align:center;margin-top:10px;font-family:Arial, Helvetica, sans-serif;">USA</p>

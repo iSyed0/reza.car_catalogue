@@ -70,7 +70,7 @@ window.onclick = function(event) {
 
 <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Login</h1>
 <br>  
-<form action="Login.php"method="post">  
+<form action="Login.php"  method="post">  
     <div class="account">   
         <label>Email:</label>   
         <input type="text" placeholder="Enter Email" name="email" required>  
@@ -78,7 +78,7 @@ window.onclick = function(event) {
         <label>Password : </label>   
         <input type="password" placeholder="Enter Password" name="password" required>  
         <br>
-        <button type="submit">Login</button>         
+        <button type="submit"   name="submit">Login</button>         
     </div>   
 </form>  
 
@@ -167,7 +167,7 @@ if(isset($_POST['submit']))
      if(mysqli_num_rows($run) )  
     {  
 session_start(); 
-        $_SESSION['email']=$uname;//here session is used and value of $uname store in $_SESSION.  
+        $_SESSION['email']=$email;
         echo "<script>window.open('index.php','_self')</script>";  
 			
   
