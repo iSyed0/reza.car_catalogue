@@ -70,7 +70,7 @@ window.onclick = function(event) {
 
 <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Login</h1>
 <br>  
-<form>  
+<form action="Login.php"method="post">  
     <div class="account">   
         <label>Email:</label>   
         <input type="text" placeholder="Enter Email" name="email" required>  
@@ -148,3 +148,40 @@ window.onclick = function(event) {
 
   </html>
 
+  <?php
+
+ 
+$dbcon=mysqli_connect("localhost","root","");  
+mysqli_select_db($dbcon,"carcatalogue");    
+  
+if(isset($_POST['submit']))  
+{  
+
+    $email=$_POST['email'];  
+    $password=$_POST['password'];  
+  
+    $check_user="select * from user_data WHERE email='$email' AND password='$password'";  
+  
+    $run=mysqli_query($dbcon,$check_user);  
+  
+     if(mysqli_num_rows($run) )  
+    {  
+session_start(); 
+        $_SESSION['email']=$uname;//here session is used and value of $uname store in $_SESSION.  
+        echo "<script>window.open('index.php','_self')</script>";  
+			
+  
+    }  
+    else  
+    { 
+            
+      echo "<script>alert('Username or password is incorrect!')</script>";  
+    }  
+}
+else{
+	
+	  
+}	
+
+
+?>
