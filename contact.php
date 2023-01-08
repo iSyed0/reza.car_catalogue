@@ -56,9 +56,9 @@ window.onclick = function(event) {
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">≡</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="index.php">HOMEPAGE</a>
+          <a href="home.php">HOMEPAGE</a>
           <a href="Bookmarks.html">Bookmarks</a>
-          <a href="Login.php">Login/Register</a>
+          <a href="index.php">Login</a>
         </div>
       </div> 
       <br>
@@ -94,7 +94,7 @@ window.onclick = function(event) {
     <div class="footer-left">
 
         <p class="footer-links">
-            <a class="link-1" href="index.php">Home</a>
+            <a class="link-1" href="home.php">Home</a>
 
             <a href="blog.html">Blogs</a>
 

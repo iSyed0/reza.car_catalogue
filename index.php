@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <!--external stylesheet-->
   <link rel="stylesheet" type="text/css" href="css.css" />
 
@@ -17,17 +16,11 @@
 
     <title>Car Catalogue</title>
 
-    <style>
-  /*img clickable area hover color*/
-img :hover{
-  background-color: rgb(240, 203, 136);}
-
-
-  /*replicate color to make title bar not look like a button*/
+<style>
   .active, .collapsible:hover {
     background-color: rgb(175, 142, 92);
   }
-  
+
 </style>
 
 <script>
@@ -49,7 +42,6 @@ window.onclick = function(event) {
     }
   }
 } 
-
 </script>
 
 </head>
@@ -64,176 +56,103 @@ window.onclick = function(event) {
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">≡</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="index.php"class="active">HOMEPAGE</a>
+          <a href="home.php">HOMEPAGE</a>
           <a href="Bookmarks.html">Bookmarks</a>
-          <a href="Login.php">Login/Register</a>
+          <a href="index.php"class="active">Login</a>
         </div>
       </div> 
-      
-                
-      <!--page title-->
-      <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Car Catalogue </h1>
-  <img src="https://blog.calcarcover.com/media/70482/img_0490.jpg?anchor=center&mode=crop&width=830&height=521&rnd=132012646180000000"alt="coverpicture"style="width:100%;height:210px"class="center">
-<!--heading and text-->
+      <br>
+      <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">CarCatalogue </h1>
+      <br><br>
 
 
-<p style="font-size:30px;text-align: center"class="collapsible">Assisting you with making a better choice in choosing an automobile.</p>
-<br>
-        <!-- search bar right align -->
-        
-        <div class="search">
-          <form action="index.php"  method="post">
-              <input type="text" placeholder=" Search Catalogue" name="search">
-              
-              <button type="submit" name="save" class="btn btn-success btn-sm">Submit</button>
- 
-                 
-              
-            </form>
-            </div>
-            <br><br>
-            <h3><u>Search Result</u></h3><br/>
-    <div class="table-responsive">          
-      <table class="table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Brand_name</th>
-            <th>Engine_power</th>
-            <th>Price</th>
-           
-          </tr>
-        </thead>
-     
-        
-  <?php
+<!--------------------- The login page HTML code ---------------------------------------> 
 
-$searchErr = '';
-$cars='';
-$servername='localhost';
-$username="root";
-$password="";
- 
-try
-{
-    $con=new PDO("mysql:host=$servername;dbname=carcatalogue",$username,$password);
-    $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-   
-}
-catch(PDOException $e)
-{
-    echo '<br>'.$e->getMessage();
-}
-  
-  
-  
-if(isset($_POST['save']))
-{
-    if(!empty($_POST['search']))
-    {
-        $search = $_POST['search'];
-        $stmt = $con->prepare("select * from cars where Brand_name like '%$search%' ");
-        $stmt->execute();
-        $cars = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-      foreach ($cars as $key => $value) {
-
-        echo $value['Brand_name'];
-
-      }
-    }
-    else
-    {
-        $searchErr = "Please enter the information";
-    }
-    
-}
- 
-?>
-
-<?php
-                 if(!$cars)
-                 {
-              if(isset($_POST['submit']))  echo 'No data found';
-                 }
-                 else{
-
-                    foreach($cars as $key=>$value)
-                    {
-                        ?>
-                    <tr>
-                        <td><?php echo $key+1;?></td>
-                        <td><?php echo $value['Brand_name'];?></td>
-                        <td ><?php echo $value['Engine_power'];?></td>
-                        <td ><?php echo $value['Price'];?></td>
-                       
-                    </tr>
-                        <?php 
-                    } 
-
-                 }
-                        
-                        ?>
-                
-                      
-                          </table>
-                          </div>  
-
-                    
-                     
-                 
-              
-                
+<h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Login</h1>
+<br>  
+<form action="home.php"  method="post">  
+    <div class="account">   
+        <label style="transform:translate(41px,40px);font-size:20px">Email :</label>   
+        <input style="transform:translate(56px,40px);font-size:20px" type="text" placeholder="Enter Email" name="email" required>  
+       <br>
+        <label style="transform:translate(10px,60px);font-size:20px">Password : </label>   
+        <input style="transform:translate(25px,60px);font-size:20px" type="password" placeholder="Enter Password" name="password" required>  
+        <br>
+        <button style="transform:translate(122px,80px);font-size:20px" type="submit"   name="submit">Login</button>         
+    </div>   
+</form>  
 
 
-<!--main content-->
-<a href="USA.html"><img style="float:center;text-align:center;width:137px;height:133px;margin-top:40px" src="https://www.norskanalyse.com/wp-content/uploads/2020/04/USA-300.png" alt="USA_flag" class="cars" ></a>
-<p style="font-size:30px;text-align:center;margin-top:10px;font-family:Arial, Helvetica, sans-serif;">USA</p>
+<br><br><br><br><br><br><br><br><br>
 
-<a href="Germany.html"><img style="float:center;width:130px;height:133px;margin-top:40px"src="https://th.bing.com/th/id/R.a8b26f66dafd3a3faf1b397e67188f49?rik=z9V6BBluZRPjKQ&pid=ImgRaw&r=0&sres=1&sresct=1" alt="Germany_flag"class="cars"></a>
-<p style="font-size:30px;text-align:center;margin-top:10px;font-family:Arial, Helvetica, sans-serif;">Germany</p>
-
-<a href="Japan.html"><img style="float:center;width:133px;height:133px;margin-top:40px"src="https://cdn.countryflags.com/thumbs/japan/flag-3d-round-250.png" alt="Japan_flag"class="cars"></a>
-<p style="font-size:30px;text-align:center;margin-top:10px;font-family:Arial, Helvetica, sans-serif;">Japan</p>
-
-<a href="Italy.html"><img style="float:center;width:133px;height:133px;margin-top:40px"src="https://i0.wp.com/marketingcube.com.au/wp-content/uploads/2018/08/FLAG-Italy-ID-Circle-274pxl.png-e1535381632780.png?ssl=1" alt="Italy_flag"class="cars"></a>
-<p style="font-size:30px;text-align:center;margin-top:10px;font-family:Arial, Helvetica, sans-serif;">Italy</p>
-
-  <br>
-
-        <p style="text-align: center">Click the flags for information.</p>
 <!--FOOTER-->
 
-<footer class="footer-distributed">
+		<footer class="footer-distributed">
 
-  <div class="footer-right"style="float:bottom">
+			<div class="footer-right">
 
-      <a href="https://www.facebook.com/profile.php?id=100088691922861"><i class="fa fa-facebook"></i></a>
-      <a href="https://twitter.com/car_catalogue?t=DwtqgY5lDBwG44lcMLMFzQ&s=09"><i class="fa fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/car-catalogue-080a2825a"><i class="fa fa-linkedin"></i></a>
-      <a href="https://github.com/iSyed0/reza.car_catalogue.git"><i class="fa fa-github"></i></a>
+				<a href="https://www.facebook.com/profile.php?id=100088691922861"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/car_catalogue?t=DwtqgY5lDBwG44lcMLMFzQ&s=09"><i class="fa fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/in/car-catalogue-080a2825a"><i class="fa fa-linkedin"></i></a>
+				<a href="https://github.com/iSyed0/reza.car_catalogue.git"><i class="fa fa-github"></i></a>
 
-  </div>
+			</div>
 
-  <div class="footer-left">
+			<div class="footer-left">
 
-      <p class="footer-links">
-          <a class="link-1" href="index.php">Home</a>
+				<p class="footer-links">
+					<a class="link-1" href="home.php">Home</a>
 
-          <a href="blog.html">Blogs</a>
+					<a href="blog.html">Blogs</a>
 
-          <a href="About.html">About</a>
+					<a href="About.html">About</a>
 
-          <a href="contact.php">Contact Us</a>
-      </p>
+					<a href="contact.php">Contact Us</a>
+				</p>
 
-      <p>CarCatalogue &copy; 2022</p>
-  </div>
+				<p>CarCatalogue &copy; 2022</p>
+			</div>
 
-</footer>
+		</footer>
 
-  </body>
+</body>
+
+  </html>
+
+  <?php
+
+ 
+$dbcon=mysqli_connect("localhost","root","");  
+mysqli_select_db($dbcon,"carcatalogue");    
+  
+if(isset($_POST['submit']))  
+{  
+
+    $email=$_POST['email'];  
+    $password=$_POST['password'];  
+  
+    $check_user="select * from user_data WHERE email='$email' AND password='$password'";  
+  
+    $run=mysqli_query($dbcon,$check_user);  
+  
+     if(mysqli_num_rows($run) )  
+    {  
+session_start(); 
+        $_SESSION['email']=$email;
+        echo "<script>window.open('home.php','_self')</script>";  
+			
+  
+    }  
+    else  
+    { 
+            
+      echo "<script>alert('Username or password is incorrect!')</script>";  
+    }  
+}
+else{
+	
+	  
+}	
 
 
-
-</html>
+?>
