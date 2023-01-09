@@ -70,7 +70,7 @@ window.onclick = function(event) {
 
 <h1 style="font-size:50px;text-align:center;position: relative;bottom: -12px;"class="collapsible">Login</h1>
 <br>  
-<form action="home.php"  method="post">  
+<form action="index.php"  method="post">  
     <div class="account">   
         <label style="transform:translate(41px,40px);font-size:20px">Email :</label>   
         <input style="transform:translate(56px,40px);font-size:20px" type="text" placeholder="Enter Email" name="email" required>  
